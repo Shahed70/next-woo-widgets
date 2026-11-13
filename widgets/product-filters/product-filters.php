@@ -23,7 +23,7 @@ class Next_Extra_Product_Filters extends Widget_Base {
     }
 
     public function get_categories() {
-        return ['next-extra-archive'];
+        return ['next-extra-archive', 'general'];
     }
 
     public function get_keywords() {

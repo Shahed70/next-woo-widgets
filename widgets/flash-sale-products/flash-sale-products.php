@@ -23,7 +23,7 @@ class Next_Extra_Flash_Sale_Products extends Widget_Base {
     }
 
     public function get_categories() {
-        return ['next-extra-general'];
+        return ['next-extra-general', 'general'];
     }
 
     public function get_keywords() {

@@ -41,8 +41,8 @@ final class Next_Extra {
             return;
         }
 
-        // Register Elementor widget category
-        add_action('elementor/elements/categories_registered', [$this, 'add_category']);
+        // Register Elementor widget category — priority 1 ensures it fires before widgets register
+        add_action('elementor/elements/categories_registered', [$this, 'add_category'], 1);
 
         // Register Elementor widgets
         add_action('elementor/widgets/register', [$this, 'register_widgets']);

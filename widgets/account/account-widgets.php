@@ -15,7 +15,7 @@ class Next_Extra_Account_Dashboard extends Widget_Base {
     public function get_name() { return 'next-extra-account-dashboard'; }
     public function get_title() { return esc_html__('Account Dashboard', 'next-extra'); }
     public function get_icon() { return 'eicon-dashboard'; }
-    public function get_categories() { return ['next-extra-my-account']; }
+    public function get_categories() { return ['next-extra-my-account', 'general']; }
     public function get_keywords() { return ['account', 'dashboard', 'my account', 'next extra', 'shopengine', 'woocommerce']; }
 
     protected function register_controls() {
@@ -74,7 +74,7 @@ class Next_Extra_Account_Address extends Widget_Base {
     public function get_name() { return 'next-extra-account-address'; }
     public function get_title() { return esc_html__('Account Address', 'next-extra'); }
     public function get_icon() { return 'eicon-map-pin'; }
-    public function get_categories() { return ['next-extra-my-account']; }
+    public function get_categories() { return ['next-extra-my-account', 'general']; }
     public function get_keywords() { return ['account', 'address', 'shipping', 'billing', 'next extra', 'shopengine', 'woocommerce']; }
 
     protected function register_controls() {
@@ -119,7 +119,7 @@ class Next_Extra_Account_Details extends Widget_Base {
     public function get_name() { return 'next-extra-account-details'; }
     public function get_title() { return esc_html__('Account Details', 'next-extra'); }
     public function get_icon() { return 'eicon-user-circle-o'; }
-    public function get_categories() { return ['next-extra-my-account']; }
+    public function get_categories() { return ['next-extra-my-account', 'general']; }
     public function get_keywords() { return ['account', 'details', 'profile', 'edit account', 'next extra', 'shopengine', 'woocommerce']; }
 
     protected function register_controls() {
@@ -164,7 +164,7 @@ class Next_Extra_Account_Downloads extends Widget_Base {
     public function get_name() { return 'next-extra-account-downloads'; }
     public function get_title() { return esc_html__('Account Downloads', 'next-extra'); }
     public function get_icon() { return 'eicon-file-download'; }
-    public function get_categories() { return ['next-extra-my-account']; }
+    public function get_categories() { return ['next-extra-my-account', 'general']; }
     public function get_keywords() { return ['account', 'downloads', 'files', 'next extra', 'shopengine', 'woocommerce']; }
 
     protected function register_controls() {
@@ -203,7 +203,7 @@ class Next_Extra_Account_Form_Login extends Widget_Base {
     public function get_name() { return 'next-extra-account-form-login'; }
     public function get_title() { return esc_html__('Account Form - Login', 'next-extra'); }
     public function get_icon() { return 'eicon-lock-user'; }
-    public function get_categories() { return ['next-extra-my-account']; }
+    public function get_categories() { return ['next-extra-my-account', 'general']; }
     public function get_keywords() { return ['login', 'account login', 'form', 'sign in', 'next extra', 'shopengine', 'woocommerce']; }
 
     protected function register_controls() {
@@ -268,7 +268,7 @@ class Next_Extra_Account_Form_Register extends Widget_Base {
     public function get_name() { return 'next-extra-account-form-register'; }
     public function get_title() { return esc_html__('Account Form - Register', 'next-extra'); }
     public function get_icon() { return 'eicon-pencil'; }
-    public function get_categories() { return ['next-extra-my-account']; }
+    public function get_categories() { return ['next-extra-my-account', 'general']; }
     public function get_keywords() { return ['register', 'account register', 'sign up', 'next extra', 'shopengine', 'woocommerce']; }
 
     protected function register_controls() {
@@ -339,7 +339,7 @@ class Next_Extra_Account_Logout extends Widget_Base {
     public function get_name() { return 'next-extra-account-logout'; }
     public function get_title() { return esc_html__('Account Logout', 'next-extra'); }
     public function get_icon() { return 'eicon-sign-out'; }
-    public function get_categories() { return ['next-extra-my-account']; }
+    public function get_categories() { return ['next-extra-my-account', 'general']; }
     public function get_keywords() { return ['logout', 'sign out', 'exit', 'account', 'next extra', 'shopengine', 'woocommerce']; }
 
     protected function register_controls() {
@@ -385,7 +385,7 @@ class Next_Extra_Account_Navigation extends Widget_Base {
     public function get_name() { return 'next-extra-account-navigation'; }
     public function get_title() { return esc_html__('Account Navigation', 'next-extra'); }
     public function get_icon() { return 'eicon-nav-menu'; }
-    public function get_categories() { return ['next-extra-my-account']; }
+    public function get_categories() { return ['next-extra-my-account', 'general']; }
     public function get_keywords() { return ['navigation', 'menu', 'account tabs', 'sidebar', 'next extra', 'shopengine', 'woocommerce']; }
 
     protected function register_controls() {
@@ -431,7 +431,7 @@ class Next_Extra_Account_Order_Details extends Widget_Base {
     public function get_name() { return 'next-extra-account-order-details'; }
     public function get_title() { return esc_html__('Account Order - Details', 'next-extra'); }
     public function get_icon() { return 'eicon-product-info'; }
-    public function get_categories() { return ['next-extra-my-account']; }
+    public function get_categories() { return ['next-extra-my-account', 'general']; }
     public function get_keywords() { return ['order details', 'receipt', 'account', 'invoice', 'next extra', 'shopengine', 'woocommerce']; }
 
     protected function register_controls() {
@@ -478,7 +478,7 @@ class Next_Extra_Account_Orders extends Widget_Base {
     public function get_name() { return 'next-extra-account-orders'; }
     public function get_title() { return esc_html__('Account Orders', 'next-extra'); }
     public function get_icon() { return 'eicon-cart'; }
-    public function get_categories() { return ['next-extra-my-account']; }
+    public function get_categories() { return ['next-extra-my-account', 'general']; }
     public function get_keywords() { return ['orders', 'purchase history', 'account', 'next extra', 'shopengine', 'woocommerce']; }
 
     protected function register_controls() {
@@ -518,7 +518,7 @@ class Next_Extra_Account_Wishlist extends Widget_Base {
     public function get_name() { return 'next-extra-account-wishlist'; }
     public function get_title() { return esc_html__('Account Wishlist', 'next-extra'); }
     public function get_icon() { return 'eicon-heart'; }
-    public function get_categories() { return ['next-extra-my-account']; }
+    public function get_categories() { return ['next-extra-my-account', 'general']; }
     public function get_keywords() { return ['wishlist', 'favorite', 'saved products', 'account', 'next extra', 'shopengine', 'woocommerce']; }
 
     protected function register_controls() {
@@ -563,7 +563,7 @@ class Next_Extra_Account_Payment_Methods extends Widget_Base {
     public function get_name() { return 'next-extra-account-payment-methods'; }
     public function get_title() { return esc_html__('Account Payment Methods', 'next-extra'); }
     public function get_icon() { return 'eicon-credit-card'; }
-    public function get_categories() { return ['next-extra-my-account']; }
+    public function get_categories() { return ['next-extra-my-account', 'general']; }
     public function get_keywords() { return ['payment methods', 'cards', 'billing', 'account', 'next extra', 'shopengine', 'woocommerce']; }
 
     protected function register_controls() {
