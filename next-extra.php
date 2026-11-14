@@ -44,6 +44,9 @@ final class Next_Extra {
         // Register Elementor widget category — priority 1 ensures it fires before widgets register
         add_action('elementor/elements/categories_registered', [$this, 'add_category'], 1);
 
+        // Filter out locked duplicate promo widgets from Elementor editor panel
+        add_filter('elementor/editor/localize_settings', [$this, 'filter_pro_widgets'], 1001);
+
         // Register Elementor widgets
         add_action('elementor/widgets/register', [$this, 'register_widgets']);
 
@@ -71,28 +74,64 @@ final class Next_Extra {
 
     public function add_category($elements_manager) {
         $elements_manager->add_category(
-            'next-extra-general',
+            'next-extra',
             [
-                'title' => esc_html__('General', 'next-extra'),
-                'icon'  => 'fa fa-plug',
+                'title' => esc_html__('Next Extra - Woo Widgets', 'next-extra'),
+                'icon'  => 'eicon-woocommerce',
             ]
         );
 
         $elements_manager->add_category(
             'next-extra-archive',
             [
-                'title' => esc_html__('Archive', 'next-extra'),
-                'icon'  => 'fa fa-folder-open',
+                'title' => esc_html__('Next Extra - Shop & Archive', 'next-extra'),
+                'icon'  => 'eicon-archive-posts',
+            ]
+        );
+
+        $elements_manager->add_category(
+            'next-extra-general',
+            [
+                'title' => esc_html__('Next Extra - General', 'next-extra'),
+                'icon'  => 'eicon-cart',
             ]
         );
 
         $elements_manager->add_category(
             'next-extra-my-account',
             [
-                'title' => esc_html__('My Account', 'next-extra'),
-                'icon'  => 'fa fa-user-circle',
+                'title' => esc_html__('Next Extra - My Account', 'next-extra'),
+                'icon'  => 'eicon-user-circle-o',
             ]
         );
+    }
+
+    public function filter_pro_widgets($settings) {
+        if (!empty($settings['promotionWidgets']) && is_array($settings['promotionWidgets'])) {
+            $unlocked = [
+                'advanced-coupon',
+                'product-carousel',
+                'flash-sale-products',
+                'best-selling-product',
+                'product-filters',
+                'account-dashboard',
+                'account-address',
+                'account-details',
+                'account-downloads',
+                'account-form-login',
+                'account-form-register',
+                'account-logout',
+                'account-navigation',
+                'account-order-details',
+                'account-orders',
+                'account-wishlist',
+                'account-payment-methods',
+            ];
+            $settings['promotionWidgets'] = array_values(array_filter($settings['promotionWidgets'], function($w) use ($unlocked) {
+                return !isset($w['name']) || !in_array($w['name'], $unlocked, true);
+            }));
+        }
+        return $settings;
     }
 
     public function register_widgets($widgets_manager) {

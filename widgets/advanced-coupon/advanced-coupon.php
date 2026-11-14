@@ -23,7 +23,11 @@ class Next_Extra_Advanced_Coupon extends Widget_Base {
     }
 
     public function get_categories() {
-        return ['next-extra-general', 'general'];
+        return ['next-extra', 'next-extra-general', 'shopengine-general', 'general'];
+    }
+
+    public function show_in_panel() {
+        return true;
     }
 
     public function get_keywords() {

@@ -23,7 +23,11 @@ class Next_Extra_Product_Filters extends Widget_Base {
     }
 
     public function get_categories() {
-        return ['next-extra-archive', 'general'];
+        return ['next-extra', 'next-extra-archive', 'shopengine-archive', 'general'];
+    }
+
+    public function show_in_panel() {
+        return true;
     }
 
     public function get_keywords() {
